@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 08, 2018 at 01:39 AM
+-- Generation Time: Nov 08, 2018 at 01:56 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -63,6 +63,31 @@ INSERT INTO `mesin` (`mesinID`, `mesin_code`, `desc`, `seri`, `created_by`, `cre
 (29, 'fdasd', 'a', '536202835', 'Admin', '2018-11-08 01:34:41'),
 (30, 'asdadad', 'v', '699879446', 'Admin', '2018-11-08 01:34:41');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `siswa`
+--
+
+CREATE TABLE `siswa` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(32) NOT NULL,
+  `kelas` varchar(10) NOT NULL,
+  `jurusan` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `siswa`
+--
+
+INSERT INTO `siswa` (`id`, `nama`, `kelas`, `jurusan`) VALUES
+(1, 'Fatoni Arif', 'XI', 'Teknik Komputer & Ja'),
+(2, 'Tedy Sultoni', 'XI', 'Multimedia'),
+(3, 'Ahmad Nasikin', 'XII', 'Teknik Komputer & Ja'),
+(4, 'Mundzir Masruri', 'X', 'Akuntansi'),
+(5, 'Ahmad Khoiri', 'X', 'Teknik Komputer & Ja'),
+(6, 'Khasa', 'XI', 'Akuntansi');
+
 --
 -- Indexes for dumped tables
 --
@@ -74,6 +99,12 @@ ALTER TABLE `mesin`
   ADD PRIMARY KEY (`mesinID`);
 
 --
+-- Indexes for table `siswa`
+--
+ALTER TABLE `siswa`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -82,6 +113,12 @@ ALTER TABLE `mesin`
 --
 ALTER TABLE `mesin`
   MODIFY `mesinID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `siswa`
+--
+ALTER TABLE `siswa`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
